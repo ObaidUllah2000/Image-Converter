@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter</title>
+    <link rel="stylesheet" href="/static/css/HELLO.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Baloo+Bhai+2&family=Comforter+Brush&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="/static/css/files/w.jpg" alt="">
+            <div id="text">Project Convert</div>
+        </div>
+        <div class="mid">
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a> </li>
+                    <li><a href="#">About Us</a> </li>
+                    <li><a href="#">Contact</a> </li>
+                    <li><a href="#">description</a> </li>
+                </ul>
+            </nav>
+        </div>
+        <section class="uploadArea">
+            <form  method="post" enctype="multipart/form-data">  
+                {% csrf_token %}  
+                {{ form.as_p }}  
+                <button type="submit">Upload</button>  
+            </form>         
+        </section>
+        <div class="main">
+        <div class="imgArea">
+                <h3>Succesfully uploaded : <span id="cap">{{img_obj.caption}}</span></h3>  
+                
+                <img src="{{img_obj.image.url}}" alt="connect" style="max-height:300px">  
+        </div>
+        <div class="textArea">
+            <p >{{text}}</p>
+        </div>
+        </div>
+        <section class="audioSec">
+        <input id="progressBar" name="range" value="0" type="range">
+        <div class="icons">
+            <img id="masterPlay" src="../static/icons/play-button-svgrepo-com.svg" alt="icon">
+            <div class="volumeBox">
+            <input type="range" name="volume" value="100" id="volume"><span>volume level</span> 
+      </div>
+        </section>   
+    </div>
+    <script src="/static/js/scc.js"></script>
+</body>
+</html>

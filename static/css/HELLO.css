@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url('files/ko.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* font-family: 'Acme', sans-serif; */
+    font-family: 'Baloo Bhai 2', cursive;
+    color: white;
+
+}
+.left {
+    /* border: 2px solid rgb(35, 145, 85); */
+    display: inline;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: white;
+}
+.left img {
+    height: 100px;
+    width: 125px;
+}
+.mid {
+    /* border: 2px solid rgb(146, 236, 43); */
+    display: block;
+    width: 40%;
+    margin: 15px auto;
+}
+nav{
+    width: 50vw;
+    height: 10vh;
+    margin: auto;
+    border: 2px solid rgb(22, 209, 47);
+}
+nav li{  
+    display: inline;
+    margin: 6px;
+    padding: 5px;
+}
+nav ul{
+    height: 10vh;
+    background: none;
+    border-radius: 60px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a{
+    margin: 0px 15px;
+    padding: 3px 4px;
+    border-radius: 5px;
+    border: 2px solid black;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav ul li a:hover{
+    background: white;
+    color: black
+}
+nav li a.active {
+    color: rgb(156, 134, 134);
+}
+.uploadArea{
+    color: white;
+    background: none;
+    border: 2px solid purple;
+    width: 30vw;
+    height: 25vh;
+    margin: 10px auto;
+    margin-left: 200px;
+}
+.main{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imgArea{
+    background: none;
+    width: 48%;
+    height: 500px;
+    display: inline-block;
+
+}
+.textArea{
+    background: rgb(15, 27, 34);
+    opacity: .7;
+    /* border: 2px solid blue; */
+    width: 45%;
+    height: 300px;
+    display: inline-block;
+}
+.audioSec{
+    background-color: rgb(5, 65, 155);
+    opacity: .7;
+    width: 90vw;
+    height: 20vh;
+    margin: 15px auto;
+}
+.icons img{
+    width: 50px;
+}
+.icons{
+    width: 70vw;
+    margin: -20px auto;
+    display: flex;
+    justify-content: center;
+
+    /* align-items: center; */
+}
+#progressBar{
+    width: 70vw;
+    margin: 15px auto;
+    display: block;
+
+}
+.volumeBox{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;    
+}
